@@ -31,7 +31,7 @@ Tässä käytin Karvisen (2018) ohjeistusta ja tunnilla samaan aikaan opittua.
 
 ## Python
 
-Tähän kieleen olikin jo aikaisemmin kerennyt tutustua eli Python:
+Tähän kieleen olikin jo aikaisemmin kerennyt tutustua. Se oli asennettuna jo valmiiksi, joten etenin suoraan seuraavasti:
 
 Loin tiedoston
 * **`nano hello.py`** 
