@@ -42,11 +42,11 @@ Kirjoitin sisällön
 Ajoin sen
 * **`python3 hello.py`** 
 
-![1](images/1.png)
+![2](images/2.png)
 
 _Nanoon haluttu sisältö_
 
-![2](images/2.png)
+![1](images/1.png)
 
 _Nätisti tulostui_
 
