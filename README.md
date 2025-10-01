@@ -40,7 +40,7 @@ Kirjoitin sisällön
   - Ctrl + X
 
 Ajoin sen
-* **`python3 hello.py`** - 
+* **`python3 hello.py`** 
 
 ![1](images/1.png)
 
