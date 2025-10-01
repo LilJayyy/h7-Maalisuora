@@ -31,7 +31,9 @@ Valitsin hänen ohjeestaan Pythonin, Bashin ja Luan.
 
 ## Python
 
-Tähän kieleen olikin jo aikaisemmin kerennyt tutustua. Se oli asennettuna jo valmiiksi, joten jätän asennusvaiheen tässä osiossa pois.
+Kävin alkuun asentamassa kaikki ohjelmakielien paketit:
+
+* **`sudo apt-get install python3 gcc g++ openjdk-17-jdk golang-go ruby lua5.4`**
 
 Loin tiedoston
 * **`nano hello.py`** 
@@ -77,13 +79,9 @@ _Komennot prosessissa_
 
 ## Lua
 
-1. Asensin sen ensin alla olevalla komennolla:
-* **`sudo apt-get install lua5.4`**
+1. Asensin jo tosiaan kaikki alla olevalla komennolla:
+* **`sudo apt-get install python3 gcc g++ openjdk-17-jdk golang-go ruby lua5.4`**
   - syötin salasanan ja Enter
-  
-![6](images/6.png)
-
-_Lua asennusta_
 
 2. Loin tiedoston 
 * **`nano hello.lua`**
@@ -187,7 +185,7 @@ _Onnistunut komennolla tulostus_
 
 ## e) Etusivu uusiksi
 
-Tässä tehtäväosiossa hyödynsin omaa raporttiani h3 Maailma kuulee ja Karvisen (2018) ohjetta.
+Tässä tehtäväosiossa hyödynsin omaa raporttiani h3 Hello Web Server ja Karvisen (2018) ohjetta.
 
 Tämäkin vaihe meni kyllä todella hyvin ulkomuistista suurimmalta osin.
 
@@ -218,10 +216,11 @@ Sisältö on alla oleva sillä halusimme tehtävänosiossa kotisivn "Al Kakone":
 
 * **`hostname -I`** komennolla muistelin virtuaalikoneen IP-osoitetta joka oli `10.0.2.15`.
 
-Tässä kohtaa ilmeni virhetilanne:
-Se vei minut väärälle sivulle eli oletushakemiston HTML-sisältöön, eikä juuri luomaani käyttäjän liljas sisältöön.
+Tässä kohtaa ilmeni virhetilanne.
 
 Olin kirjoittanut virtuaalikoneen internet-selaimen hakukenttään `10.0.2.15` oikean `http://10.0.2.15/~liljas/` sijaan. 
+
+Se vei minut väärälle sivulle eli **oletushakemiston HTML-sisältöön, eikä juuri luomaani käyttäjän liljas sisältöön**.
 
 Tajusin onneksi nopeasti virhetilanteen, ja pääsin hienosti alla olevaan näkymään:
 
@@ -232,16 +231,143 @@ _Uusi Al Kakone kotisivu_
 
 ## e) Salattua hallinta
 
+Tähän tehtävänatoon siirryin samana päivänä kello 20:45.
+
+Tätä tehtävässä hyödynsin osittain ulkomuistia, omaa h4 Maailma kuulee tehtävää, AskUbuntua (2013) ja DigitalOcean (2025 & 2016) ohjeita. 
+
 - Asenna ssh-palvelin
 - Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"
 - Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta
 
+1. Pakettien päivitystä
+* **`sudo apt-get update`**
 
+2. OpenSSH asennusta, käyttöönottoa ja tarkistusta
+* **`sudo apt-get install openssh-server`**
+* **`sudo systemctl enable ssh`**
+* **`sudo systemctl start ssh`**
+* **`sudo systemctl status ssh`**
 
+3. Käyttäjän luonti pääkäyttäjänä ja varuiksi vielä oikeudet
+* **`sudo adduser liljas`**
+* **`sudo chown -R liljas:liljas /home/nimi01`**
+
+4. SSH automatisointi
+* **`ssh-keygen`**
+* **`ssh-copy-id liljas01@localhost`**
+  - Syötin salasanan ja kirjauduin ulos välissä
+ 
+* **`ssh liljas01@localhost`**
+
+![18](images/18.png)
+
+_Uuden käyttäjän luomista_
+
+![21](images/21.png)
+
+_Onnistunut lopputulos eli kirjautuminen vain passilla_
+
+5. Portin tarkistusta ja vaihtamista
+
+* **`sudo nano /etc/ssh/sshd_config`**
+  - Salasana ja Enter
+  - #Port 22 -> Pois "#" merkki ja "Port 1337" tilalle.
+  - Ctrl O + Enter + Ctrl X
+ 
+Nyt portti 1337 on konfiguroitu. 
+
+6. Tarkistusta `sudo sshd -t` komennolla ja käynnistystä perään `sudo systemctl restart ssh`
+
+7. Palomuuriin reikä ja sallitaan kyseinen uusi portti `1337`
+* **`sudo ufw allow 1337/tcp`** 
+* **`sudo ufw reload`**
+* **`sudo ufw status`**
+
+Lopuksi tarkistus komennolla:
+* **`ssh -p 1337 liljas01@localhost`**
+  - Salasana ja Enter
+ 
+![22](images/22.png)
+
+_SSH toimii nyt portilla 1337_
 
 ## h) Djangon lahjat
 
+Tähän tehtävänantoon etenin samana päivänä kello 21:50. Edellisessä tehtävässä joutui hieman tutkiskelemaan SSH serverin portin vaihtoa, joten siirtymään tuli viivettä.
+
+Tässä osiossa hyödynsin DedicatedCoren (2024) ohjevideota,  Django REST framework verkkosivua, sekä RealPythonia (2024).
+
+Tehtävänantona oli:
+`Asenna omalle käyttäjällesi Django-kehitysympäristö
+-Tee tietokantaan lista tekoälyistämme, jossa on nämä ominaisuudet
+-Kirjautuminen salasanalla
+-Tietokannan muokkaus wepissä Djangon omalla ylläpitoliittymällä (Django admin)
+-Käyttäjä Erkille, jossa ei ole ylläpito-oikeuksia
+-Taulu Assistants, jossa jokaisella tietueella on nimi (name)
+-Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)`
+
+1. Lähdin asentamaan Django 4 kehitysympäristöä ensin asentamalla paketit ja luomalla kansion
+* **`sudo apt-get install python3-pip python3-venv`** 
+* **`mkdir django`** - polulle /home/liljas/django
+* **`cd django`** - siirryin kansioon
+
+2. Virtualenv
+* **`python3 -m venv env`**
+* **`source env/bin/activate`**
+* **`micro requirements.txt*** - tiedoston luontia
+* **`django`** - teksti sisälle ja Ctrl + S ja Ctrl + Q
+* **`pip install -r requirements.txt`** - asennuksen suorittaminen
+
+3. Django projektin aloittaminen
+* **`django-admin startproject Lahjoitukset`**
+* **`cd Lahjoitukset`**
+* **`./manage.py runserver`**
+* **`http://127.0.0.1:8000/`** näkyi hienosti kuten pitikin ja testasin osoitteen virtuaalikoneen internet-selaimessa
+
+![22](images/22.png)
+
+![24](images/24.png)
+
+_Onnistunut asennus_
+
+4. Hallinta tietokannassa ja sen luominen
+* **`./manage.py migrate`**
+
+5. Ylläpitäjä luominen (admin)
+* **`./manage.py createsuperuser`**
+* * Käyttäjätunnukseksi: admin
+  * Salasanaksi: perttipannukakkuporkkanaleipä255!
+
+6. Erkin käyttäjän luominen ja aktivointi ilman admin oikeuksia
+* **`/manage.py shell`** avasin django shellin
+* Käyttäjätunnus: Erkki
+* Salasana: porkkanakeppiperunalanttunauris
+```from django.contrib.auth.models import User
+erkki = User.objects.create_user(username='erkki', password='porkkanakeppiperunalanttunauris')
+erkki.is_staff = True
+erkki.is_superuser = False
+erkki.save()
+exit()
+```
+![23](images/23.png)
+
+_Erkki käyttäjän lisääminen onnistunut_
+
+7. Tietokanta
+
+
 # Lähteet
+AskUbuntu. 2013. Keskustelufoorumi. _How to run the SSH server on a port other than 22_ Luettavissa: https://askubuntu.com/questions/264046/how-to-run-the-ssh-server-on-a-port-other-than-22/ Luettu: 1.10.2025.
+
+DedicatedCore. 2023. Youtube. _How To Install Django on Ubuntu 22.04 LTS | Install Django on Linux (Step by Step)_ Katsottavissa: https://www.youtube.com/watch?v=OHZZkGK0bZM Katsottu: 1.10.2025.
+
+DigitalOcean. 2025. Verkkosivu. _How do I change my Droplet's SSH port?_ Luettavissa: https://docs.digitalocean.com/support/how-do-i-change-my-droplets-ssh-port/ Luettu: 1.10.2025.
+
+DigitalOcean. 2025. Verkkosivu. _How to Use SSH to Connect to a Remote Server (Step-by-Step Guide)_ Luettavissa: https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server/ Luettu: 1.10.2025.
+
+DigitalOcean. 2025. Verkkosivu. _How to Set Up SSH Keys on Ubuntu: A Comprehensive Guide_ Luettavissa: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-22-04/ Luettu: 1.10.2025.
+
+Django REST framework. _Quickstart_ Luettavissa: https://www.django-rest-framework.org/tutorial/quickstart/ Luettu: 1.10.2025.
 
 Karvinen, T. 2025. Verkkosivu. _Linux Palvelimet 2025_ alkusyksy Luettavissa: https://terokarvinen.com/linux-palvelimet/ Luettu: 20.08.2025.
 
@@ -250,3 +376,11 @@ Karvinen, T. 2018. Artikkeli. Name Based Virtual Hosts on Apache – Multiple We
 Karvinen, T. 2018. Verkkosivu. _Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04_ Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/ Luettu: 1.10.2025.
 
 Karvinen, T. 2024. Verkkosivu. _Final Lab for Linux Palvelimet 2024 Spring_ Luettavissa: https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/ Luettu: 1.10.2025
+
+Karvinen, T. 2017. Verkkosivu. First Steps on a New Virtual Private Server – an Example on DigitalOcean and Ubuntu 16.04 LTS Luettavissa: https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/ Luettu 13.09.2025.
+
+RealPython. 2024. Verkkosivu. _Python Virtual Environments: A Primer_ Luettavissa: https://realpython.com/python-virtual-environments-a-primer/ Luettu: 1.10.2025.
+
+Sharifi, L. 2025. Raportti. _h4 Maailma kuulee_ Luettavissa: https://github.com/LilJayyy/h4-Maailma-kuulee/edit/main/Palautus.md Luettu: 1.10.2025. 
+
+Sharifi, L. 2025. Raportti. _h3 Hello Web Server_ Luettavissa: https://github.com/LilJayyy/h3-Hello-Web-Server/blob/main/Palautus.md Luettu: 1.10.2025.
