@@ -203,7 +203,8 @@ Apache on jo asennettu, joten sitä prosessia en tässä kohtaa raporttia käy l
 
 Sisältö on alla oleva sillä halusimme tehtävänosiossa kotisivn "Al Kakone":
 
-```<!DOCTYPE html>
+```
+<!DOCTYPE html>
 <html>
 <head>
     <title>AI Kakone</title>
@@ -211,7 +212,9 @@ Sisältö on alla oleva sillä halusimme tehtävänosiossa kotisivn "Al Kakone":
 <body>
     <h1>Tervetuloa AI Kakoneen kotisivulle!</h1>
 </body>
-</html>```
+</html>
+```
+
 
 * **`hostname -I`** komennolla muistelin virtuaalikoneen IP-osoitetta joka oli `10.0.2.15`.
 
