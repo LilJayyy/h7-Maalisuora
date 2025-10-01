@@ -136,32 +136,114 @@ echo "Tervetuloa Linuxiin!"`**
 5. Ajetaan ja testausta
 * **`Tervetuloa`**
 
-![8](images/9.png)
+![9](images/9.png)
 
 _Yllä oleva prosessi kuvina eli tehty komentoni_
   
-# d) Laboratorioharjoitus
+# Vanha laboratorioharjoitus
 
+[d) howdy](#d-howdy)
+
+[e) Etusivu uusiksi](#e-Etusivu-uusiksi)
+
+[g) Salattua hallintaa](#g-Salattua-hallintaa)
+
+[h) Djangon lahjat](#h-Djangon-lahjat)
+
+Saman päivänä 1.10.2025 siirryin kello 19:57 tämän osion pariin. 
+
+Valitsin _Final Lab for Linux Palvelimet 2024 Spring_ eli viime vuoden kevään laboratorioharjoituksen ja sovelsin sitä ohjeistuksen mukaan tarvittaessa.
+
+## d) 'howdy'
+
+`Tehtävänantona oli:
+- Tee kaikkien käyttäjien käyttöön komento 'howdy'
+- Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms
+- Pelkkä "hei maailma" ei riitä
+- Komennon tulee toimia kaikilla käyttäjillä työhakemistosta riippumatta`
+
+Tästä tein ylempää juuri vastaavan, joten tämä osuus oli vielä erittäin hyvin muistissa.
+
+1. Päivitin ensin paketit välissä
+* **`sudo apt-get update`**
+
+2. Nanolla tiedosto 
+* **`nano howdy`**
+
+3. Annoin oikeudet ajoon
+* **`chmod +x howdy`**
+
+4. Kopioin käyttäjille skriptin pääkäyttäjän roolissa
+* **`sudo cp howdy /usr/local/bin/`**
+
+5. Testaus
+* **`howdy`**
+
+![9](images/9.png)
+
+_Onnistunut komennolla tulostus_
+
+
+
+## e) Etusivu uusiksi
+
+Tässä tehtäväosiossa hyödynsin omaa raporttiani h3 Maailma kuulee ja Karvisen (2018) ohjetta.
+
+Tämäkin vaihe meni kyllä todella hyvin ulkomuistista suurimmalta osin.
+
+1. Pakettien päivitystä
+* **`sudo apt-get update`**
+
+Apache on jo asennettu, joten sitä prosessia en tässä kohtaa raporttia käy läpi.
+
+
+2. Loin uuden kansion kotihakemistoon ja kirjoitin web-sivun sisällön index.html tiedostoon nanolla
+* **`mkdir -p ~/public_html`**
+* **`nano ~/public_html/index.html`**
+
+Sisältö on alla oleva sillä halusimme tehtävänosiossa kotisivn "Al Kakone":
+
+```<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Kakone</title>
+</head>
+<body>
+    <h1>Tervetuloa AI Kakoneen kotisivulle!</h1>
+</body>
+</html>```
+
+* **`hostname -I`** komennolla muistelin virtuaalikoneen IP-osoitetta joka oli `10.0.2.15`.
+
+Tässä kohtaa ilmeni virhetilanne:
+Se vei minut väärälle sivulle eli oletushakemiston HTML-sisältöön, eikä juuri luomaani käyttäjän liljas sisältöön.
+
+Olin kirjoittanut virtuaalikoneen internet-selaimen hakukenttään `10.0.2.15` oikean `http://10.0.2.15/~liljas/` sijaan. 
+
+Tajusin onneksi nopeasti virhetilanteen, ja pääsin hienosti alla olevaan näkymään:
+
+![20](images/20.png)
+
+_Uusi Al Kakone kotisivu_
+
+
+## e) Salattua hallinta
+
+- Asenna ssh-palvelin
+- Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"
+- Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta
+
+
+
+
+## h) Djangon lahjat
 
 # Lähteet
 
-Karvinen, T. 2025. Verkkosivu. Linux Palvelimet 2025 alkusyksy Luettavissa: https://terokarvinen.com/linux-palvelimet/ Luettu: 20.08.2025.
+Karvinen, T. 2025. Verkkosivu. _Linux Palvelimet 2025_ alkusyksy Luettavissa: https://terokarvinen.com/linux-palvelimet/ Luettu: 20.08.2025.
 
-Karvinen, T. 2018. Verkkosivu. Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/ Luettu: 1.10.2025.
+Karvinen, T. 2018. Artikkeli. Name Based Virtual Hosts on Apache – Multiple Websites to Single IP Address Luettavissa: https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/ Luettu: 05.09.2025.
 
+Karvinen, T. 2018. Verkkosivu. _Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04_ Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/ Luettu: 1.10.2025.
 
-
-h7 Maalisuora
-a) Kirjoita ja aja "Hei maailma" kolmella kielellä.
-c) Laita Linuxiin uusi, itse tekemäsi komento niin, että kaikki käyttäjät voivat ajaa sitä.
-d) Ratkaise vanha arvioitava laboratorioharjoitus soveltuvin osin.
-Jos haluat tehdä vapaaehtoisen tehtävän h8, sen määräaika on sama kuin h7.
-
-Vinkit:
-
-Karvinen 2018: Hello World Python3, Bash, C, C++, Go, Lua, Ruby, Java – Programming Languages on Ubuntu 18.04
-Uuden komennon saat ajettavaksi Karvinen 2007: Shell Scripting, ja kaikille kopioimalla sen pääkäyttäjänä kansioon /usr/local/bin/
-Muistaakseni ohjelmointikielien paketit Debian 12-bookworm:ssa ovat 'sudo apt-get install python3 gcc g++ openjdk-17-jdk golang-go ruby lua5.4'
-Vanhoja arvioitavia laboratorioharjoituksia löytyy Teron sivujen omalla hakutoiminnolla, Googlella ja DuckDuckGolla.
-Vanhoissa labroissa voi olla osia, joita ei ole käsitelty tällä toteutuksella. Voit soveltaa, vaihtaa tai hypätä yli noista osista.
-Muista aina hyvät salasanat. Älä jätä käyttäjien kotihakemistoihin root:in omistamia tiedostoja. Testaa kaikki mitä olet tehnyt.
+Karvinen, T. 2024. Verkkosivu. _Final Lab for Linux Palvelimet 2024 Spring_ Luettavissa: https://terokarvinen.com/2024/arvioitava-laboratorioharjoitus-2024-linux-palvelimet/ Luettu: 1.10.2025
