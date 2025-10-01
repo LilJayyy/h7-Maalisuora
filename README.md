@@ -23,9 +23,11 @@
 
 # a) Hei Maailma
 
-Lähdin tässä tehtävänosiossa 1.10.2025 kello 18:40 etenemään seuraavasti. Tarkoitus oli siis kirjoittaa ja ajaa kolmella kielellä.
+Lähdin tässä tehtävänosiossa 1.10.2025 kello 18:40 etenemään seuraavasti. Tarkoitus oli siis kirjoittaa ja ajaa kolmella kielellä. 
 
 Tässä käytin Karvisen (2018) ohjeistusta ja tunnilla samaan aikaan opittua.
+
+Valitsin hänen ohjeestaan Pythonin, Bashin ja Luan.
 
 ## Python
 
@@ -54,19 +56,19 @@ _Nätisti tulostui_
 
 Tätä kerkesin jo kokeilla tunnin aikana Johannan opastuksella.
 
-Tiedoston luominen
+1. Tiedoston luominen
 * **`nano hello.sh`** 
 
-Sisältö koodeineen sinne
+2. Sisältö koodeineen sinne
 * **`#!/bin/bash 
 echo "Hei maailma"`**
   - Ctrl + O
   - Ctrl + X
 
-Annoin oikeudet ajamiseen
+3. Annoin oikeudet ajamiseen
 * **`chmod +x hello.sh`** 
 
-Ajoin sisällön
+4. Ajoin sisällön
 * **`./hello.sh`** 
 
 ![4](images/4.png)
@@ -75,7 +77,7 @@ _Komennot prosessissa_
 
 ## Lua
 
-Asensin sen ensin alla olevalla komennolla:
+1. Asensin sen ensin alla olevalla komennolla:
 * **`sudo apt-get install lua5.4`**
   - syötin salasanan ja Enter
   
@@ -83,19 +85,19 @@ Asensin sen ensin alla olevalla komennolla:
 
 _Lua asennusta_
 
-Loin tiedoston 
+2. Loin tiedoston 
 * **`nano hello.lua`**
 
 ![5](images/5.png)
 
 _Nanon sisältö_
 
-Sisältö sinne
+3. Sisältö sinne
 * **`print("Hei maailma")`**
   - Ctrl + O
   - Ctrl + X
 
-Ajoin sisällön
+4. Ajoin sisällön
 * **`print("Hei maailma")`** 
 
 ![7](images/7.png)
@@ -110,8 +112,34 @@ _Lua:lla tulostusta_
 
 # c) Komento
 
+Tähän tehäväosioon siirryin samana päivänä 1.10.2025 kello 19:22.
 
+### Skripti
 
+Tätäkin tehtävänosaa seurasin tunnin aikana, jota oli helppo tehdä tässä samalla.
+
+1. Loin tiedoston `Tervetuloa` nanolla komennolla:
+* **`nano Tervetuloa`**
+
+2. Sisältöä skriptiin
+* **`#!/bin/bash`
+echo "Tervetuloa Linuxiin!"`**
+  - Ctrl + O
+  - Ctrl + X
+
+3. Annoin oikeudet ajamiseen
+* **`chmod +x Tervetuloa`**
+
+4. Kopioin käyttäjille skriptin pääkäyttäjän roolissa
+* **`sudo cp Tervetuloa /usr/local/bin/`**
+
+5. Ajetaan ja testausta
+* **`Tervetuloa`**
+
+![8](images/9.png)
+
+_Yllä oleva prosessi kuvina eli tehty komentoni_
+  
 # d) Laboratorioharjoitus
 
 
