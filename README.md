@@ -75,7 +75,7 @@ _Komennot prosessissa_
 
 ## Lua
 
-Asensin sen ensin 
+Asensin sen ensin alla olevalla komennolla:
 * **`sudo apt-get install lua5.4`**
   - syötin salasanan ja Enter
   
