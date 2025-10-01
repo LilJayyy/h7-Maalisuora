@@ -23,15 +23,13 @@
 
 # a) Hei Maailma
 
-**Hei maailma kolmella kielellä** 
-
 Lähdin tässä tehtävänosiossa 1.10.2025 kello 18:40 etenemään seuraavasti. Tarkoitus oli siis kirjoittaa ja ajaa kolmella kielellä.
 
 Tässä käytin Karvisen (2018) ohjeistusta ja tunnilla samaan aikaan opittua.
 
 ## Python
 
-Tähän kieleen olikin jo aikaisemmin kerennyt tutustua. Se oli asennettuna jo valmiiksi, joten etenin suoraan seuraavasti:
+Tähän kieleen olikin jo aikaisemmin kerennyt tutustua. Se oli asennettuna jo valmiiksi, joten jätän asennusvaiheen tässä osiossa pois.
 
 Loin tiedoston
 * **`nano hello.py`** 
