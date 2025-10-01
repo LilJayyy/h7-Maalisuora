@@ -23,18 +23,105 @@
 
 # a) Hei Maailma
 
+Lähdin tässä tehtävänosiossa 1.10.2025 kello 18:40 etenemään seuraavasti. Tarkoitus oli siis kirjoittaa ja ajaa kolmella kielellä.
+
+Tässä käytin Karvisen (2018) ohjeistusta ja tunnilla samaan aikaan opittua.
+
+**Hei maailma kolmella kielellä** 
+
+## Python
+
+Tähän kieleen olikin jo aikaisemmin kerennyt tutustua eli Python:
+
+Loin tiedoston
+* **`nano hello.py`** 
+
+Kirjoitin sisällön
+* **`print ("Hei maailma")`**
+  - Ctrl + O
+  - Ctrl + X
+
+Ajoin sen
+* **`python3 hello.py`** - 
+
+![1](images/1.png)
+
+_Nanoon haluttu sisältö_
+
+![2](images/2.png)
+
+_Nätisti tulostui_
+
+## Bash
+
+Tätä kerkesin jo kokeilla tunnin aikana Johannan opastuksella.
+
+Tiedoston luominen
+* **`nano hello.sh`** 
+
+Sisältö koodeineen sinne
+* **`#!/bin/bash 
+echo "Hei maailma"`**
+  - Ctrl + O
+  - Ctrl + X
+
+Annoin oikeudet ajamiseen
+* **`chmod +x hello.sh`** 
+
+Ajoin sisällön
+* **`./hello.sh`** 
+
+![4](images/4.png)
+
+_Komennot prosessissa_
+
+## Lua
+
+Asensin sen ensin 
+* **`sudo apt-get install lua5.4`**
+  - syötin salasanan ja Enter
+  
+![6](images/6.png)
+
+_Lua asennusta_
+
+Loin tiedoston 
+* **`nano hello.lua`**
+
+![5](images/5.png)
+
+_Nanon sisältö_
+
+Sisältö sinne
+* **`print("Hei maailma")`**
+  - Ctrl + O
+  - Ctrl + X
+
+Ajoin sisällön
+* **`print("Hei maailma")`** 
+
+![7](images/7.png)
+
+_Lua:lla tulostusta_
+
+
+
 # b) Lähdeviitteet
 
-* Tämä tehtävänosion kuittasin tehneeksi, sillä vittasin kaikkin lähteisiin ohjeistusten mukaisesti niitä tehdessä. Ainoa, josta lähdeviittauksia ei tehty oli tehtävä h0.
+* Tämä tehtävänosio oli jo tehty tätä raporttia kirjoittaessa, sillä vittasin kaikkin lähteisiin ohjeistusten mukaisesti niitä tehdessä. 
 
 # c) Komento
+
+
 
 # d) Laboratorioharjoitus
 
 
+# Lähteet
 
+Karvinen, T. 2025. Verkkosivu. Linux Palvelimet 2025 alkusyksy Luettavissa: https://terokarvinen.com/linux-palvelimet/ Luettu: 20.08.2025.
 
-
+Karvinen, T. 2018. Verkkosivu. Luettavissa: https://terokarvinen.com/2018/hello-python3-bash-c-c-go-lua-ruby-java-programming-languages-on-ubuntu-18-04/ Luettu: 1.10.2025.
 
 
 
