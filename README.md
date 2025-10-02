@@ -154,7 +154,8 @@ Valitsin _Final Lab for Linux Palvelimet 2024 Spring_ eli viime vuoden kevään 
 
 ### d) 'howdy'
 
-`Tehtävänantona oli:
+Tehtävänantona oli:
+`
 - Tee kaikkien käyttäjien käyttöön komento 'howdy'
 - Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms
 - Pelkkä "hei maailma" ei riitä
@@ -186,6 +187,12 @@ _Onnistunut komennolla tulostus_
 ### e) Etusivu uusiksi
 
 Tässä tehtäväosiossa hyödynsin omaa raporttiani h3 Hello Web Server ja Karvisen (2018) ohjetta.
+Tehtävänanto oli:
+`
+Asenna Apache-weppipalvelin
+Tee yrityksellemme "AI Kakone" kotisivu
+Kotisivu tulee näkyä koneesi IP-osoitteella suoraan etusivulla
+Sivua pitää päästä muokkaamaan normaalin käyttäjän oikeuksin (ilman sudoa). Liitä raporttiisi listaus tarvittavien tiedostojen ja kansioiden oikeuksista.`
 
 Tämäkin vaihe meni kyllä todella hyvin ulkomuistista suurimmalta osin.
 
@@ -236,9 +243,11 @@ Tähän tehtävänatoon siirryin samana päivänä kello 20:45.
 
 Tätä tehtävässä hyödynsin osittain ulkomuistia, omaa h4 Maailma kuulee tehtävää, AskUbuntua (2013) ja DigitalOcean (2025 & 2016) ohjeita. 
 
+Tehtävänantona oli: 
+`
 - Asenna ssh-palvelin
 - Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"
-- Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta
+- Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta`
 
 1. Pakettien päivitystä
 * **`sudo apt-get update`**
