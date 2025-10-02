@@ -8,7 +8,7 @@
 
 [c) Komento](#c-Komento)
 
-[d) Laboratorioharjoitus](#d-Laboratorioharjoitus)
+[d) Vanha Laboratorioharjoitus](#d-Vanha-Laboratorioharjoitus)
 
 
 ### Koneen tekniset tiedot
