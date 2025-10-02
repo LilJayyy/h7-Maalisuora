@@ -1,4 +1,4 @@
-<img width="820" height="239" alt="image" src="https://github.com/user-attachments/assets/d7cdcb5e-b35f-4b25-9612-25b54602aeb7" /># h7-Maalisuora
+# h7-Maalisuora
 
 ## Sisältö
 
