@@ -155,7 +155,7 @@ Valitsin _Final Lab for Linux Palvelimet 2024 Spring_ eli viime vuoden kevään 
 ### d) 'howdy'
 
 Tehtävänantona oli:
-  - Tee kaikkien käyttäjien käyttöön komento 'howdy'
+* Tee kaikkien käyttäjien käyttöön komento 'howdy'
   - Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms
   - Pelkkä "hei maailma" ei riitä
   - Komennon tulee toimia kaikilla käyttäjillä työhakemistosta riippumatta`
@@ -242,11 +242,10 @@ Tähän tehtävänatoon siirryin samana päivänä kello 20:45.
 
 Tätä tehtävässä hyödynsin osittain ulkomuistia, omaa h4 Maailma kuulee tehtävää, AskUbuntua (2013) ja DigitalOcean (2025 & 2016) ohjeita. 
 
-Tehtävänantona oli: 
-`
-- Asenna ssh-palvelin
-- Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"
-- Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta`
+Tehtävänantona oli
+* Asenna ssh-palvelin
+  - Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"
+  - Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta
 
 1. Pakettien päivitystä
 * **`sudo apt-get update`**
@@ -307,13 +306,13 @@ Tähän tehtävänantoon etenin samana päivänä kello 21:50. Edellisessä teht
 Tässä osiossa hyödynsin DedicatedCoren (2024) ohjevideota,  Django REST framework verkkosivua, sekä RealPythonia (2024).
 
 Tehtävänantona oli:
-`Asenna omalle käyttäjällesi Django-kehitysympäristö
--Tee tietokantaan lista tekoälyistämme, jossa on nämä ominaisuudet
--Kirjautuminen salasanalla
--Tietokannan muokkaus wepissä Djangon omalla ylläpitoliittymällä (Django admin)
--Käyttäjä Erkille, jossa ei ole ylläpito-oikeuksia
--Taulu Assistants, jossa jokaisella tietueella on nimi (name)
--Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)`
+* Asenna omalle käyttäjällesi Django-kehitysympäristö
+  - Tee tietokantaan lista tekoälyistämme, jossa on nämä ominaisuudet
+  - Kirjautuminen salasanalla
+  - Tietokannan muokkaus wepissä Djangon omalla ylläpitoliittymällä (Django admin)
+  - Käyttäjä Erkille, jossa ei ole ylläpito-oikeuksia
+  - Taulu Assistants, jossa jokaisella tietueella on nimi (name)
+  - Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)`
 
 1.  Asennus ja loin kansion
 * **`sudo apt-get install python3-pip python3-venv`** 
