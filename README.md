@@ -155,11 +155,10 @@ Valitsin _Final Lab for Linux Palvelimet 2024 Spring_ eli viime vuoden kevään 
 ### d) 'howdy'
 
 Tehtävänantona oli:
-`
-- Tee kaikkien käyttäjien käyttöön komento 'howdy'
-- Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms
-- Pelkkä "hei maailma" ei riitä
-- Komennon tulee toimia kaikilla käyttäjillä työhakemistosta riippumatta`
+  - Tee kaikkien käyttäjien käyttöön komento 'howdy'
+  - Tulosta haluamaasi ajankohtaista tietoa, esim päivämäärä, koneen osoite tms
+  - Pelkkä "hei maailma" ei riitä
+  - Komennon tulee toimia kaikilla käyttäjillä työhakemistosta riippumatta`
 
 Tästä tein ylempää juuri vastaavan, joten tämä osuus oli vielä erittäin hyvin muistissa.
 
@@ -188,12 +187,11 @@ _Onnistunut komennolla tulostus_
 
 Tässä tehtäväosiossa hyödynsin omaa raporttiani h3 Hello Web Server ja Karvisen (2018) ohjetta.
 Tehtävänanto oli:
-``
 
--Asenna Apache-weppipalvelin
--Tee yrityksellemme "AI Kakone" kotisivu
--Kotisivu tulee näkyä koneesi IP-osoitteella suoraan etusivulla
--Sivua pitää päästä muokkaamaan normaalin käyttäjän oikeuksin (ilman sudoa). Liitä raporttiisi listaus tarvittavien tiedostojen ja kansioiden oikeuksista.``
+* Asenna Apache-weppipalvelin
+  - Tee yrityksellemme "AI Kakone" kotisivu
+  - Kotisivu tulee näkyä koneesi IP-osoitteella suoraan etusivulla
+  - Sivua pitää päästä muokkaamaan normaalin käyttäjän oikeuksin (ilman sudoa). Liitä raporttiisi listaus tarvittavien tiedostojen ja kansioiden oikeuksista.``
 
 Tämäkin vaihe meni kyllä todella hyvin ulkomuistista suurimmalta osin.
 
