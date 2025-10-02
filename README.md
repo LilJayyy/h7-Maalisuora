@@ -331,12 +331,14 @@ Tehtävänantona oli:
 
 _Onnistunut asennus_
 
-4. Hallintasivu (admin) tietokannassa 
+4. Hallintasivu (admin) tietokannassa
+* **`./manage.py makemigrations`**
 * **`./manage.py migrate`**
-* **`
 * **`./manage.py createsuperuser`**
-* * Käyttäjätunnukseksi: admin
-  * Salasanaksi: perttipannukakkuporkkanaleipä255!
+* **`./manage.py runserver`**
+  - Käyttäjätunnukseksi: admin
+  - Salasanaksi: perttipannukakkuporkkanaleipä255!
+  - Lopuksi vielä testaus kirjautumalla sisään onnistuneesti. 
 
 6. Erkin käyttäjän luominen ja aktivointi ilman admin oikeuksia
 * **`/manage.py shell`** avasin django shellin
