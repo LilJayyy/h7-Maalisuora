@@ -8,7 +8,7 @@
 
 [c) Komento](#c-Komento)
 
-[d) Vanha Laboratorioharjoitus](#d-Vanha-Laboratorioharjoitus)
+[d) Laboratorioharjoitus](#d-Laboratorioharjoitus)
 
 
 ### Koneen tekniset tiedot
@@ -138,7 +138,7 @@ echo "Tervetuloa Linuxiin!"`**
 
 _Yllä oleva prosessi kuvina eli tehty komentoni_
   
-# Vanha laboratorioharjoitus
+# d) Laboratorioharjoitus
 
 [d) howdy](#d-howdy)
 
@@ -152,7 +152,7 @@ Saman päivänä 1.10.2025 siirryin kello 19:57 tämän osion pariin.
 
 Valitsin _Final Lab for Linux Palvelimet 2024 Spring_ eli viime vuoden kevään laboratorioharjoituksen ja sovelsin sitä ohjeistuksen mukaan tarvittaessa.
 
-## d) 'howdy'
+### d) 'howdy'
 
 `Tehtävänantona oli:
 - Tee kaikkien käyttäjien käyttöön komento 'howdy'
@@ -183,7 +183,7 @@ _Onnistunut komennolla tulostus_
 
 
 
-## e) Etusivu uusiksi
+### e) Etusivu uusiksi
 
 Tässä tehtäväosiossa hyödynsin omaa raporttiani h3 Hello Web Server ja Karvisen (2018) ohjetta.
 
@@ -230,7 +230,7 @@ Tajusin onneksi nopeasti virhetilanteen, ja pääsin hienosti alla olevaan näky
 _Uusi Al Kakone kotisivu_
 
 
-## g) Salattua hallinta
+### g) Salattua hallinta
 
 Tähän tehtävänatoon siirryin samana päivänä kello 20:45.
 
@@ -292,7 +292,7 @@ Lopuksi tarkistus komennolla:
 
 _SSH toimii nyt portilla 1337_
 
-## h) Djangon lahjat
+### h) Djangon lahjat
 
 Tähän tehtävänantoon etenin samana päivänä kello 21:50. Edellisessä tehtävässä joutui hieman tutkiskelemaan SSH serverin portin vaihtoa, joten siirtymään tuli viivettä.
 
