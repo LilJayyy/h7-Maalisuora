@@ -189,6 +189,7 @@ _Onnistunut komennolla tulostus_
 Tässä tehtäväosiossa hyödynsin omaa raporttiani h3 Hello Web Server ja Karvisen (2018) ohjetta.
 Tehtävänanto oli:
 ``
+
 -Asenna Apache-weppipalvelin
 -Tee yrityksellemme "AI Kakone" kotisivu
 -Kotisivu tulee näkyä koneesi IP-osoitteella suoraan etusivulla
