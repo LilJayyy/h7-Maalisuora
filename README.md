@@ -1,4 +1,4 @@
-# h7-Maalisuora
+<img width="820" height="239" alt="image" src="https://github.com/user-attachments/assets/d7cdcb5e-b35f-4b25-9612-25b54602aeb7" /># h7-Maalisuora
 
 ## Sisältö
 
@@ -215,6 +215,7 @@ Sisältö on alla oleva sillä halusimme tehtävänosiossa kotisivn "Al Kakone":
 
 
 * **`hostname -I`** komennolla muistelin virtuaalikoneen IP-osoitetta joka oli `10.0.2.15`.
+  
 
 Tässä kohtaa ilmeni virhetilanne.
 
@@ -229,7 +230,7 @@ Tajusin onneksi nopeasti virhetilanteen, ja pääsin hienosti alla olevaan näky
 _Uusi Al Kakone kotisivu_
 
 
-## e) Salattua hallinta
+## g) Salattua hallinta
 
 Tähän tehtävänatoon siirryin samana päivänä kello 20:45.
 
@@ -338,14 +339,14 @@ _Onnistunut asennus_
 * **`./manage.py runserver`**
   - Käyttäjätunnukseksi: admin
   - Salasanaksi: perttipannukakkuporkkanaleipä255!
-  - Lopuksi vielä testaus kirjautumalla sisään onnistuneesti. 
+* * **`http://127.0.0.1:8000/admin`** Lopuksi vielä testaus kirjautumalla sisään onnistuneesti. 
 
 6. Erkin käyttäjän luominen ja aktivointi ilman admin oikeuksia
 * **`/manage.py shell`** avasin django shellin
 * Käyttäjätunnus: Erkki
 * Salasana: porkkanakeppiperunalanttunauris
 ```from django.contrib.auth.models import User
-erkki = User.objects.create_user(username='erkki', password='porkkanakeppiperunalanttunauris')
+erkki = User.objects.create_user(username='Erkki', password='porkkanakeppiperunalanttunauris')
 erkki.is_staff = True
 erkki.is_superuser = False
 erkki.save()
@@ -356,7 +357,49 @@ exit()
 _Erkki käyttäjän lisääminen onnistunut_
 
 7. Tietokanta
+**`./manage.py startapp tietokanta`** - sovelluksen luontia
+**`nano Lahjoitukset/settings.py`** 
+ - Lisäsin INSTALLED_APPS osion viimeiselle riville `tietokanta` ja Ctrl + O ja Ctrl + X
+* **`mkdir -p tietokanta/templates/tietokanta`** - loin HTML tiedoston johon laitan sisällön
+* **`nano tietokanta/templates/tietokanta/home.html`** - HTML tietojen näyttäminen
+* **`nano tietokanta/models.py`** - luokat sinne nanoa käyttäen ja Ctrl + O ja Ctrl + X
+* **`nano tietokanta/admin.py`** - rekisteröidään luotu kanta
+* **`./manage.py makemigrations`** tietojen tallentaminen
+* **`./manage.py migrate`** - muutosten käyttöönotto 
+* **`./manage.py runserver`** - serveri käyntiin
 
+![26](images/26.png)
+
+![28](images/29.png)
+
+![luokat](images/luokat.png)
+
+  _Luokat_
+
+* Tietokantaan lahjoitukset oikeus Erkille kirjautumalla superuserina sivustolle **`http://127.0.0.1:8000/admin`** 
+  - Users
+  - Staff status valittuna
+  - Can add lahjoitus
+  - Can change lahjoitus
+  - Can delete lahjoitu
+  - Can view lahjoitus
+ 
+### Lopputulos ja omapohdinta
+
+Olin tässä harjoituksessa nyt oppinut asentamaan Django-kehitysympäristön:
+- Loin projektin
+- Loin yksinkertaisen sivuston
+- Loin superuserin jolla hallintaoikeudet
+- Loin käyttäjän (Erkki) joka pystyi kirjautumaan käyttäjänä
+- Loin sivustolle lomakesivun johon voi syöttää tietoja ja katsella niitä
+
+Tämä tehtävänanto oli mielenkiintoinen ja siinä pääsikin harjoittelemaan hieman ulkomuistissa olevaa, mutta myös virkistämään muistia ja läpikäymään ohjeita ja käymään läpi omiakin raportteja.
+
+Eniten nautin Django 4- kehitysympäristöstä, sillä se oli täysin uusi asia minulle (kuten kaikki kurssin aiheetkin) mutta oli hienoa nähdä konkreettisesti yksinkertainen sivu muodostumassa pikkuhiljaa.
+
+Jatkoin tätä raportin tehtävänantoa seuraavana päivänä 2.10.2025. Kello 17:40 ja valmiiksi tuli kello 18:42.
+
+![27](images/27.png)
 
 # Lähteet
 AskUbuntu. 2013. Keskustelufoorumi. _How to run the SSH server on a port other than 22_ Luettavissa: https://askubuntu.com/questions/264046/how-to-run-the-ssh-server-on-a-port-other-than-22/ Luettu: 1.10.2025.
