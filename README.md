@@ -306,23 +306,24 @@ Tehtävänantona oli:
 -Taulu Assistants, jossa jokaisella tietueella on nimi (name)
 -Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)`
 
-1. Lähdin asentamaan Django 4 kehitysympäristöä ensin asentamalla paketit ja luomalla kansion
+1.  Asennus ja loin kansion
 * **`sudo apt-get install python3-pip python3-venv`** 
 * **`mkdir django`** - polulle /home/liljas/django
 * **`cd django`** - siirryin kansioon
 
-2. Virtualenv
-* **`python3 -m venv env`**
-* **`source env/bin/activate`**
+2. Virtualenv asennuksia
+* **`python3 -m venv env`** - luodaan ympäristö
+* **`source env/bin/activate`** - virtuaaliympäristön aktivointi
+* **`pip install -r requirements.txt`** - asennus
 * **`micro requirements.txt*** - tiedoston luontia
 * **`django`** - teksti sisälle ja Ctrl + S ja Ctrl + Q
-* **`pip install -r requirements.txt`** - asennuksen suorittaminen
 
 3. Django projektin aloittaminen
-* **`django-admin startproject Lahjoitukset`**
-* **`cd Lahjoitukset`**
-* **`./manage.py runserver`**
-* **`http://127.0.0.1:8000/`** näkyi hienosti kuten pitikin ja testasin osoitteen virtuaalikoneen internet-selaimessa
+* **`django-admin startproject Lahjoitukset`** - uusi proekti
+* **`cd Lahjoitukset`** 
+* **`./manage.py runserver`** - käynnistän serverin
+* **`source env/bin/activate`** - aktivoin ympäristön
+* **`http://127.0.0.1:8000/`** - näkyi hienosti raketti, testasin osoitteen virtuaalikoneen internet-selaimessa
 
 ![22](images/22.png)
 
@@ -330,10 +331,9 @@ Tehtävänantona oli:
 
 _Onnistunut asennus_
 
-4. Hallinta tietokannassa ja sen luominen
+4. Hallintasivu (admin) tietokannassa 
 * **`./manage.py migrate`**
-
-5. Ylläpitäjä luominen (admin)
+* **`
 * **`./manage.py createsuperuser`**
 * * Käyttäjätunnukseksi: admin
   * Salasanaksi: perttipannukakkuporkkanaleipä255!
