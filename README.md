@@ -106,7 +106,7 @@ _Lua:lla tulostusta_
 
 # b) Lähdeviitteet
 
-* Tämä tehtävänosio oli jo tehty tätä raporttia kirjoittaessa, sillä vittasin kaikkin lähteisiin ohjeistusten mukaisesti niitä tehdessä. 
+* Tämä tehtävänosio oli jo tehty, sillä tein valmiiksi lähdeviittaukset jokaisen raportin palautuksen yhteydessä.
 
 # c) Komento
 
