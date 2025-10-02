@@ -321,8 +321,6 @@ Tässä osiossa hyödynsin DedicatedCoren (2024) ohjevideota,  Django REST frame
 * **`python3 -m venv env`** - luodaan ympäristö
 * **`source env/bin/activate`** - virtuaaliympäristön aktivointi
 * **`pip install -r requirements.txt`** - asennus
-* **`micro requirements.txt*** - tiedoston luontia
-* **`django`** - teksti sisälle ja Ctrl + S ja Ctrl + Q
 
 3. Django projektin aloittaminen
 * **`django-admin startproject Lahjoitukset`** - uusi proekti
