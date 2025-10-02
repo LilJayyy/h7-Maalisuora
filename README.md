@@ -185,15 +185,13 @@ _Onnistunut komennolla tulostus_
 
 ### e) Etusivu uusiksi
 
-Tässä tehtäväosiossa hyödynsin omaa raporttiani h3 Hello Web Server ja Karvisen (2018) ohjetta.
 Tehtävänanto oli:
-
 * Asenna Apache-weppipalvelin
   - Tee yrityksellemme "AI Kakone" kotisivu
   - Kotisivu tulee näkyä koneesi IP-osoitteella suoraan etusivulla
-  - Sivua pitää päästä muokkaamaan normaalin käyttäjän oikeuksin (ilman sudoa). Liitä raporttiisi listaus tarvittavien tiedostojen ja kansioiden oikeuksista.``
-
-Tämäkin vaihe meni kyllä todella hyvin ulkomuistista suurimmalta osin.
+  - Sivua pitää päästä muokkaamaan normaalin käyttäjän oikeuksin (ilman sudoa). Liitä raporttiisi listaus tarvittavien tiedostojen ja kansioiden oikeuksista.
+ 
+Tässä tehtäväosiossa hyödynsin omaa raporttiani h3 Hello Web Server ja Karvisen (2018) ohjetta. Tämäkin vaihe meni kyllä todella hyvin ulkomuistista suurimmalta osin.
 
 1. Pakettien päivitystä
 * **`sudo apt-get update`**
@@ -240,12 +238,12 @@ _Uusi Al Kakone kotisivu_
 
 Tähän tehtävänatoon siirryin samana päivänä kello 20:45.
 
-Tätä tehtävässä hyödynsin osittain ulkomuistia, omaa h4 Maailma kuulee tehtävää, AskUbuntua (2013) ja DigitalOcean (2025 & 2016) ohjeita. 
-
-Tehtävänantona oli
+Tehtävänantona oli:
 * Asenna ssh-palvelin
   - Tee uusi käyttäjä omalla nimelläsi, esim. minä tekisin "Tero Karvinen test", login name: "terote01"
   - Automatisoi ssh-kirjautuminen julkisen avaimen menetelmällä, niin että et tarvitse salasanoja, kun kirjaudut sisään. Voit käyttää kirjautumiseen localhost-osoitetta
+
+Tätä tehtävässä hyödynsin osittain ulkomuistia, omaa h4 Maailma kuulee tehtävää, AskUbuntua (2013) ja DigitalOcean (2025 & 2016) ohjeita. 
 
 1. Pakettien päivitystä
 * **`sudo apt-get update`**
@@ -301,9 +299,7 @@ _SSH toimii nyt portilla 1337_
 
 ### h) Djangon lahjat
 
-Tähän tehtävänantoon etenin samana päivänä kello 21:50. Edellisessä tehtävässä joutui hieman tutkiskelemaan SSH serverin portin vaihtoa, joten siirtymään tuli viivettä.
-
-Tässä osiossa hyödynsin DedicatedCoren (2024) ohjevideota,  Django REST framework verkkosivua, sekä RealPythonia (2024).
+Tähän tehtävänantoon etenin samana päivänä kello 21:50 ja jatkoin seuraavana päivänä kello 18:42 saakka.
 
 Tehtävänantona oli:
 * Asenna omalle käyttäjällesi Django-kehitysympäristö
@@ -312,7 +308,9 @@ Tehtävänantona oli:
   - Tietokannan muokkaus wepissä Djangon omalla ylläpitoliittymällä (Django admin)
   - Käyttäjä Erkille, jossa ei ole ylläpito-oikeuksia
   - Taulu Assistants, jossa jokaisella tietueella on nimi (name)
-  - Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)`
+  - Jos haluat, voit lisäksi bonuksena laittaa mukaan kentän koko (size)
+ 
+Tässä osiossa hyödynsin DedicatedCoren (2024) ohjevideota,  Django REST framework verkkosivua, sekä RealPythonia (2024).
 
 1.  Asennus ja loin kansion
 * **`sudo apt-get install python3-pip python3-venv`** 
@@ -403,8 +401,6 @@ Olin tässä harjoituksessa nyt oppinut asentamaan Django-kehitysympäristön:
 Tämä tehtävänanto oli mielenkiintoinen ja siinä pääsikin harjoittelemaan hieman ulkomuistissa olevaa, mutta myös virkistämään muistia ja läpikäymään ohjeita ja käymään läpi omiakin raportteja.
 
 Eniten nautin Django 4- kehitysympäristöstä, sillä se oli täysin uusi asia minulle (kuten kaikki kurssin aiheetkin) mutta oli hienoa nähdä konkreettisesti yksinkertainen sivu muodostumassa pikkuhiljaa.
-
-Jatkoin tätä raportin tehtävänantoa seuraavana päivänä 2.10.2025. Kello 17:40 ja valmiiksi tuli kello 18:42.
 
 ![27](images/27.png)
 
