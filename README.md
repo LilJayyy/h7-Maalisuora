@@ -402,6 +402,9 @@ Eniten nautin Django 4- kehitysympäristöstä, sillä se oli täysin uusi asia 
 
 ![27](images/27.png)
 
+![30](images/30.png)
+
+
 # Lähteet
 AskUbuntu. 2013. Keskustelufoorumi. _How to run the SSH server on a port other than 22_ Luettavissa: https://askubuntu.com/questions/264046/how-to-run-the-ssh-server-on-a-port-other-than-22/ Luettu: 1.10.2025.
 
