@@ -384,7 +384,7 @@ _Erkki käyttäjän lisääminen onnistunut_
   - Staff status valittuna
   - Can add lahjoitus
   - Can change lahjoitus
-  - Can delete lahjoitu
+  - Can delete lahjoitus
   - Can view lahjoitus
  
 ### Lopputulos ja omapohdinta
